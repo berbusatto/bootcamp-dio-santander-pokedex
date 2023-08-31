@@ -1,6 +1,6 @@
 const pokeApi = {}
 
-pokeApi.getPokemons = function (offset = 0, limit = 10){ // default
+pokeApi.getPokemons = function (offset = 0, limit = 5){ // default
     // FETCH API (substituindo jquery e já está no browser)
     // processamento assíncrono 
 
@@ -29,7 +29,7 @@ function convertPokeApiDetailToPokemon(pokeDetail){
     const pokemon = new Pokemon()
 
     pokemon.name = pokeDetail.name
-    pokemon.number = pokeDetail.order
+    pokemon.number = pokeDetail.id
 
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
     const [type] = types // desestruturação
