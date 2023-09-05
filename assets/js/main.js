@@ -29,6 +29,9 @@ function loadPokemonItems(offset, limit){
                     </ol>
                     <img src="${pokemon.photo}" alt="${pokemon.name}">
                 </div>
+                <div>
+                    <a href="pokemon-details?number=${pokemon.number}.html">Detalhes</a>
+                </div>
             </li>
         `).join('')     
         pokemonList.innerHTML += newHtml
@@ -46,14 +49,12 @@ loadMoreButton.addEventListener('click', () => {
     } else {
         loadPokemonItems(offset, limit)
     }
-
-    
 })
 
 
 
-
-
+const pokemonCards = document.getElementsByClassName('pokemon')
+console.log(pokemonCards)
 
 
 

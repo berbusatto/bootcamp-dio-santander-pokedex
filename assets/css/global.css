@@ -3,10 +3,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #f6f8fc;
-}
-
 .content {
     padding: 1rem;
     background-color: aliceblue;

@@ -3,4 +3,6 @@ class Pokemon {
     name;
     types = [];
     photo;
+    stats = [];
+    // learnset = [];
 }
