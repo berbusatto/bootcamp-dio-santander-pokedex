@@ -63,6 +63,10 @@ body {
     padding: 0;
 }
 
+#pokemonTypesList {
+    list-style: none;
+}
+
 .stats li {
     display: flex;
     justify-content: space-between;

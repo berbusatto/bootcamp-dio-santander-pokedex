@@ -1,9 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const pokemonDetailsContainer = document.getElementById("container");
-const pokemonNameElement = document.getElementById("pokemonName");
-const pokemonImageElement = document.getElementById("pokemonImage");
-const pokemonTypesElement = document.getElementById("pokemonTypes");
-const pokemonStatsElement = document.getElementById("pokemonStats");
+
 
 const pokemonNumber = urlParams.get('number').slice(0,-5)
 
@@ -16,15 +13,23 @@ function loadPokemonDetails(pokemonNumber) {
 
     .then((pokemonDetails) => {
         const detailsHtml = `
-                  
-            <h1 class=""pokemon-name" id="${pokemonDetails.name}">${pokemonDetails.name}</h1>
+                          
+            <div class="pokemon-name">
+                <h1 id="${pokemonDetails.name}">${pokemonDetails.name}</h1>
+            </div>
             <div class="pokemon-image">
                 <img src="${pokemonDetails.photo}" alt="${pokemonDetails.name}"/>
             </div>
-            <h2>Types</h2>
-                <ul id="pokemonTypes" class="pokemon-types">
-                ${pokemonDetails.types.map((type) => `<li>${type}</li>`).join('/')}
+            <div class="pokemon-number">
+                #${pokemonDetails.number}
+            </div>
+            <div class="pokemon-types>">
+                <h2>Types</h2>
+                <ul id="pokemonTypesList">
+                ${pokemonDetails.types.map((type) => `<li>${type}</li>`).join('')}
                 </ul>
+            </div>
+            
             <h2>Stats</h2>
             <ul id="pokemonStats" class="pokemon-stats">
             ${pokemonDetails.stats.map((stat) => `<li>${stat.name}: ${stat.value}</li>`).join('')}
