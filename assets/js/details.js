@@ -21,11 +21,11 @@ function loadPokemonDetails(pokemonNumber) {
                 <img src="${pokemonDetails.photo}" alt="${pokemonDetails.name}"/>
             </div>
             <div class="pokemon-number">
-                #${pokemonDetails.number}
+                <h1>#${pokemonDetails.number}</h1>
             </div>
             <div class="pokemon-types>">
                 <h2>Types</h2>
-                <ul id="pokemonTypesList">
+                <ul>
                 ${pokemonDetails.types.map((type) => `<li>${type}</li>`).join('')}
                 </ul>
             </div>
