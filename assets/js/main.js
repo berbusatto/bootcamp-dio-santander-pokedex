@@ -29,7 +29,7 @@ function loadPokemonItems(offset, limit){
                     </ol>
                     <img src="${pokemon.photo}" alt="${pokemon.name}">
                 </div>
-                <div>
+                <div class="details-button">
                     <a href="pokemon-details?number=${pokemon.number}.html">Detalhes</a>
                 </div>
             </li>
